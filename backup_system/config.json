@@ -1,0 +1,36 @@
+{
+  "system_config": {
+    "backup_root": "./backups",
+    "source_directory": "./test_data",
+    "retention_policy": {
+      "full_backup_days": 7,
+      "incremental_backup_days": 1,
+      "differential_backup_days": 3,
+      "monthly_retention_months": 12
+    },
+    "rto_minutes": 30,
+    "rpo_minutes": 5
+  },
+  "backup_strategies": {
+    "default": "full",
+    "options": ["full", "incremental", "differential"]
+  },
+  "integrity_check": {
+    "algorithm": "sha256",
+    "verify_on_restore": true
+  },
+  "logging": {
+    "log_file": "./logs",
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "version_management": {
+    "auto_cleanup": true,
+    "preserve_count": 5
+  },
+  "notifications": {
+    "enabled": true,
+    "on_success": true,
+    "on_failure": true
+  }
+}

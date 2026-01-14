@@ -1,0 +1,20 @@
+{
+  "local_sources": [
+    {
+      "name": "Test Data",
+      "path": "./test_data"
+    }
+  ],
+  "aws_s3": {
+    "enabled": true,
+    "bucket_name": "ENTER AWS BUCKET NAME",
+    "region": "ENTER AWS BUCKET REGION",
+    "access_key": "ENTER AWS ACCESS KEY",
+    "secret_key": "ENTER AWS SECRET KEY"
+  },
+  "ssh_servers": [],
+  "retention": {
+    "local_days": 7,
+    "s3_days": 30
+  }
+}
